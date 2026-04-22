@@ -1,5 +1,11 @@
+import Courses from "./components/Courses";
+
 function App() {
-  return <div className="text-4xl font-bold font-nohemi">App</div>;
+  return (
+    <div className="m-20">
+      <Courses />
+    </div>
+  );
 }
 
 export default App;
