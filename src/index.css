@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -15,5 +16,21 @@
 }
 
 @theme {
+  /* Animation Section */
+  @keyframes slideToRightLoop {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(8px);
+    }
+  }
+  --animate-slide-right-loop: slideToRightLoop 1s ease-in-out infinite;
+
+  /* Other setup */
   --font-nohemi: "Nohemi", "Inter", sans-serif;
+  --font-outfit: "Outfit", "Outfit", sans-serif, system-ui;
+  --color-red-light: #f9ebec;
+  --color-red-dark: #c33241;
 }
