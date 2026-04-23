@@ -1,4 +1,5 @@
 import type { CoursesDetailsType } from "../../types/courses";
+import { motion } from "motion/react";
 
 type LightRedCardProps = CoursesDetailsType & {
   setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,16 +13,26 @@ function LightRedCard({
 }: LightRedCardProps) {
   return (
     <div
-      className="group w-70 h-115.25 bg-red-light rounded-4xl flex flex-col justify-between gap-3 overflow-hidden px-2 py-4"
+      className="group w-70 h-115.25 bg-red-light rounded-4xl flex flex-col justify-between gap-3 overflow-hidden px-2 py-4 hover:cursor-pointer"
       onClick={() => setIsActive((prev) => !prev)}
     >
-      <div className="flex flex-row items-end max-h-64 justify-center gap-3 ">
-        <h3 className="font-outfit font-bold text-4xl text-red-dark leading-normal [writing-mode:vertical-rl] rotate-180 text-center">
+      <div className="flex flex-row items-end max-h-64 justify-center gap-3">
+        <motion.h3
+          className="font-outfit font-bold text-4xl text-red-dark leading-11 [writing-mode:vertical-rl] rotate-180 text-start"
+          initial={{ translateX: "-130%", opacity: 0 }}
+          animate={{ translateX: "0%", opacity: 1 }}
+          transition={{ type: "spring", bounce: 0.5, duration: 0.8 }}
+        >
           {title}
-        </h3>
-        <p className="font-outfit text-lg text-red-dark leading-normal [writing-mode:vertical-rl] rotate-180 mt-auto">
+        </motion.h3>
+        <motion.p
+          className="font-outfit text-lg text-red-dark leading-normal [writing-mode:vertical-rl] rotate-180 mt-auto"
+          initial={{ translateX: "-130%", opacity: 0 }}
+          animate={{ translateX: "0%", opacity: 1 }}
+          transition={{ type: "spring", bounce: 0.5, duration: 0.8 }}
+        >
           {description}
-        </p>
+        </motion.p>
       </div>
 
       <div className="text-red-dark font-nohemi flex flex-row items-start justify-center">

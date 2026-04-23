@@ -26,11 +26,24 @@
       transform: translateX(8px);
     }
   }
+
+  @keyframes bounceUp {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
   --animate-slide-right-loop: slideToRightLoop 1s ease-in-out infinite;
+  --animate-bounce-up: bounceUp 1.5s ease-in-out infinite;
 
   /* Other setup */
   --font-nohemi: "Nohemi", "Inter", sans-serif;
   --font-outfit: "Outfit", "Outfit", sans-serif, system-ui;
   --color-red-light: #f9ebec;
   --color-red-dark: #c33241;
+  --color-text-white: #fafafa;
 }
