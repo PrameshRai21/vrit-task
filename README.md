@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# Vrit Technologies - Task Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React based project assigned by Vrit Technologies for Frontend.
 
-Currently, two official plugins are available:
+- To See Project Live - [Click Here](https://vrit-task-omega.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔨 Tech Stack
 
-## React Compiler
+- React.js
+- Typescript
+- Tailwind CSS
+- Zustand
+- Tanstack Query
+- Axios
+- Zod
+- Motion
+- React Router
+- Lucide
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✅ Prerequisites
 
-## Expanding the ESLint configuration
+| Tool        | Version   | Install                           |
+| ----------- | --------- | --------------------------------- |
+| **Node.js** | `>= 24.x` | [nodejs.org](https://nodejs.org/) |
+| **pnpm**    | `>= 10.x` | See below                         |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Install pnpm
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Using npm
+npm install -g pnpm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Using Homebrew (macOS)
+brew install pnpm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Using standalone script (Linux/macOS)
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Verify installations:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+node -v   # e.g. v24.11.0
+pnpm -v   # e.g. 10.1.0
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```
+  git clone [repo-link]
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+```
+
+### 3. Start the development server
+
+```bash
+pnpm dev
 ```
